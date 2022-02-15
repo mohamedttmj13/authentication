@@ -1,0 +1,33 @@
+<%- include('partial/header') -%>
+
+        <main class="form-signin">
+            <form action="/login" method="post">
+              <img class="mb-4" src="/images/user.png" alt="" width="52" height="48">
+              <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+          
+              <div class="form-floating">
+                <input type="email" class="form-control shadow-none" id="floatingInput" name="email" placeholder="name@example.com" autocomplete="off" required>
+                <label for="floatingInput">Email address</label>
+                <% if(emailNotExist){ %>
+                  <span style="color: red;">Incorrect Email address.</span>
+                <% } %>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control shadow-none mt-1" id="floatingPassword" name="password" placeholder="Password" required>
+                <label for="floatingPassword">Password</label>
+                <% if(isPasswordIncorrect){ %>
+                  <span style="color: red;">Incorrect password.</span>
+                <% } %>
+              </div>
+          
+              <div class="checkbox mb-3">
+                <label>
+                  <a href="/reset" style="text-decoration: none; color: #817f7f;">Forgot password?</a>
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+              
+            </form>
+          </main>
+
+<%- include('partial/footer') -%>

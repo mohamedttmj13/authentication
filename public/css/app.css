@@ -1,0 +1,150 @@
+html,
+body {
+  height: auto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f5f5f5;
+}
+
+header, footer{
+  background-color: #ffffff;
+}
+
+header{
+  padding-right: .5rem;
+}
+
+header .app-brand{
+  color: #00B4D8;
+  margin-left: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header .app-brand span{
+  color: red;
+  padding-left: .5rem;
+}
+.active{
+  color:#00B4D8;
+}
+.sign{
+  border: 1px solid #00B4D8;
+  color: #00B4D8;
+}
+.sign:hover{
+  background-color: #00B4D8;
+}
+.signup{
+  background-color: #00B4D8;
+  border: 1px solid #00B4D8 !important;
+}
+.signup:hover{
+  background-color: #17c5e7;
+}
+
+/*Hero*/
+.hero{
+  display: flex;
+  justify-content: space-between;
+}
+.hero-left .hero-right{
+  width: 47%;
+  text-align: center;
+}
+.hero-left p{
+  line-height: 2;
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+}
+
+.hero-right img{
+  width: 70%;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+footer{
+  padding: .5rem 0;
+  margin-bottom: .5rem;
+}
+footer p{
+  font-size: .8rem;
+}
+footer p a{
+  text-decoration: none;
+  color: black;
+}
+footer p a:hover{
+  color: #00B4D8;
+}
+
+  
+  @media (max-width: 1000px) {
+    header .app-brand{
+      font-size: 1.2rem;
+    }
+    .hero-left p{
+      line-height: 1.5;
+      letter-spacing: .1rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 872px) {
+    body{
+      display: unset;
+    }
+    .hero{
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 768px) {
+    header .app-brand{
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }

@@ -1,0 +1,36 @@
+<%- include('partial/header') -%>
+
+        <main class="form-signin">
+            <form action="/register" method="post">
+              <img class="mb-4" src="/images/user.png" alt="" width="52" height="48">
+              <h1 class="h3 mb-3 fw-normal">Sign up</h1>
+
+              <div class="form-floating">
+                <input type="text" class="form-control shadow-none" id="floatingInput" name="fName" placeholder="First name" autocomplete="off" required>
+                <label for="floatingInput">First name</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control shadow-none mt-1" id="floatingInput" name="lName" placeholder="last name" autocomplete="off" required>
+                <label for="floatingInput">last name</label>
+              </div>
+          
+              <div class="form-floating">
+                <input type="email" class="form-control shadow-none mt-1" id="floatingInput" name="email" placeholder="name@example.com" autocomplete="off" required>
+                <label for="floatingInput">Email address</label>
+                <% if(existingEmail){ %>
+                  <span style="color: red;">Email already exist, sign in intead.</span>
+                <% } %>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control shadow-none mt-1" id="floatingPassword" name="password" placeholder="Password" required>
+                <label for="floatingPassword">Password (8 + characters)</label>
+                <% if(passwordLessThenHeightChar){ %>
+                  <span style="color: red;">The password much at least 8 character.</span>
+                <% } %>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+              
+            </form>
+          </main>
+
+<%- include('partial/footer') -%>

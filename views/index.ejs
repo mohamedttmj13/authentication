@@ -1,0 +1,20 @@
+<%- include('partial/header') -%>
+            
+            <div class="p-5 mb-4 bg-light rounded-3 hero">
+              <div class="hero-left">
+                <h1 class="display-7 fw-bold">User authentication</h1>
+                <%if(isAuthenticated){%>
+                  <h3 style="color: #00B4D8;">Welcome <%= userAuthenticated.fName %> <%= userAuthenticated.lName %>!</h3>
+                <%}%>
+                <p>
+                  I built this beautiful user authentication app using Node js, Express js, MongoDB,
+                  bcrypt and Nodemailer. A user can create an account, sign in,
+                   reset password when forgotten and change password if needed.
+                 </p>
+              </div>
+              <div class="hero-right">
+                <img src="/images/user.png">
+              </div>
+              </div>
+
+<%- include('partial/footer') -%>
