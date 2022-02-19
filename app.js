@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 //Connect to mongoDB
-mongoose.connect(process.env.CONNECTIONSTRING, {useNewUrlParser:true});
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser:true});
 
 //User schema
 const userSchema = new mongoose.Schema({
